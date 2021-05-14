@@ -26,7 +26,7 @@ import java.net.InetAddress;
  * that is why while sending back the response the server need to
  * check the port that was set in the packet sent by the client
  * and respond to that port.
- * @author rvaidhiy
+ * @author rama_swuni
  *
  */
 public class HelloUDPThread extends Thread {

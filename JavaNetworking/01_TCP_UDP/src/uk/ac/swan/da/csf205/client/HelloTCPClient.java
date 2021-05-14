@@ -21,7 +21,7 @@ import java.net.Socket;
  * This is the TCP Client code that sends a language in which
  * it wants the word "hello" in and waits for the appropriate
  * response. Doesn't do anything else. 
- * @author rvaidhiy
+ * @author rama_swuni
  *
  */
 public class HelloTCPClient {

@@ -10,7 +10,7 @@ import java.rmi.registry.Registry;
 import uk.ac.swan.da.csf205.server.Hello;
 
 /**
- * @author rvaidhiy
+ * @author rama_swuni
  *
  */
 public class HelloClient {

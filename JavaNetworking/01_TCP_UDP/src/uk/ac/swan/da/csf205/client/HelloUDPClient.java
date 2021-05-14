@@ -21,7 +21,7 @@ import java.net.UnknownHostException;
  * it wants the word "hello" in and it doesn't actually wait, it 
  * can go on about its business and when the server sends the datapacket
  * it will read it.
- * @author rvaidhiy
+ * @author rama_swuni
  *
  */
 public class HelloUDPClient {

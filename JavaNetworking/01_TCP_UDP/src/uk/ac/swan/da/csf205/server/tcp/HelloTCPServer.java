@@ -23,7 +23,7 @@ import java.net.Socket;
  * This is the TCP Server code that accepts a language in which
  * the client want the word "hello" in and sends the appropriate
  * response. Doesn't do anything else. 
- * @author rvaidhiy
+ * @author rama_swuni
  *
  */
 public class HelloTCPServer {

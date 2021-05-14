@@ -8,7 +8,7 @@ import java.rmi.RemoteException;
 
 /**
  * It just says hello
- * @author rvaidhiy
+ * @author rama_swuni
  *
  */
 public interface Hello extends Remote {
