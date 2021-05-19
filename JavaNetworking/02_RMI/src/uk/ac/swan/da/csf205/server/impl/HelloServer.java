@@ -10,18 +10,22 @@ import uk.ac.swan.da.csf205.server.Hello.LANG;
 
 /**
  * The class which implements the RMI interface defined
+ * @author rama_swuni
  */
 public class HelloServer implements Hello {
 
 	/**
 	 * The actual implementation of the RMI interface
-	 * @return String saying hello in Welsh atm
+	 * @return String saying hello in English
 	 */
 	@Override
 	public String sayHello() throws RemoteException {
 		return "Hello!";
 	}
-	
+	/**
+	 * The actual implementation of the RMI interface
+	 * @return String saying hello in different languages
+	 */
 	@Override
 	public String sayHello(LANG language) throws RemoteException {
 		switch(language)
@@ -42,7 +46,7 @@ public class HelloServer implements Hello {
 		try
 		{
 			//Setting this inorder to ensure that the TCP connection goes through (else you will have connection refused error)
-			//System.setProperty("java.rmi.server.hostname", "192.168.1.186");
+			//System.setProperty("java.rmi.server.hostname", "xxx.xxx.xxx.xxx");
 			//Create an instance of the implementation class
 			HelloServer hs = new HelloServer();
 			//Export that implementation instance to the Java RMI runtime environment
@@ -57,10 +61,13 @@ public class HelloServer implements Hello {
 			Registry registry = LocateRegistry.createRegistry(1919);
 			//now bind the exported stub to a name
 			registry.bind("Hello", stub);
+			//just printing this out to let the user know that something is happening at the server end
 			System.out.println("Ready to accept service requests");
 			
 		}catch(Exception e)
 		{
+			//bad programming this, but its ok for demonstration purposes. 
+			//in your labs and courseworks make sure to handle the exceptions appropriately
 			e.printStackTrace(System.out);
 			
 		}

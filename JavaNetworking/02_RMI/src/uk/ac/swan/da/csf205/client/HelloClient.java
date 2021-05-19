@@ -10,6 +10,7 @@ import java.rmi.registry.Registry;
 import uk.ac.swan.da.csf205.server.Hello;
 
 /**
+ * Sample RMI Client Implementation
  * @author rama_swuni
  *
  */
@@ -37,6 +38,8 @@ public class HelloClient {
 			System.out.println("Stub says: " +stub.sayHello(Hello.LANG.UNSUPPORTED));			
 		}catch(Exception e)
 		{
+			//bad programming this, but its ok for demonstration purposes. 
+			//in your labs and courseworks make sure to handle the exceptions appropriately
 			System.out.println(e.getMessage());
 		}
 	}
