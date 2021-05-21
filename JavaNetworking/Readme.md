@@ -3,6 +3,7 @@ This folder contains sources for
 1. Java TCP Server, and a Client
 2. Java UDP Server, a Java Client, and a Python Client
 3. Java RMI interface, Server implementation, and a Client
+4. Java CORBA implementation using JACORB (This is not required for the assessments. The code is here only for demonstration purposes)
 
 They all perform the same task (client sends a language and server responds back by sending the language equivalent of the word 'hello'). It is a very simple task used for illustration purposes. 
 
