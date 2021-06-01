@@ -1,3 +1,2 @@
 # SOAP 
-This folder contains sources for 
-a) SOAP 
+This folder contains sources for SOAP web service development. We are currently not using any specific web server to deploy our web services. I will provide a demo of it later. There is *jarfiles.zip* which contains all the necessary jar files you would need for compiling and executing your services. We will be testing our services using Postman (I will also add a Java client later). You will need these source code for your labs and as your reference for your courseworks.
