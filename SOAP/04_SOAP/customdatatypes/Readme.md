@@ -6,3 +6,12 @@ The service is created using custom data types and pure java code without using 
 You can copy all the code to your Eclipse and include _*JAXWS-RI*_ jar files in your module and classpath and then run the TeamsPublisher/BookStorePublisher class. This will start the service in the port specified in the java file. You can then use your Postman tool to test your service.
 
 This folder also has the CircleFunctions example shown in the lecture slides for your reference. The generated directory is the result of using *wsgen* utility on the CircleFunctions class. 
+
+If you want to use Maven you can add the following dependency.
+    	<dependency>
+    		<groupId>com.sun.xml.ws</groupId>
+    		<artifactId>jaxws-ri</artifactId>
+    		<version>3.0.1</version>
+    	<type>pom</type>
+		</dependency>
+    
