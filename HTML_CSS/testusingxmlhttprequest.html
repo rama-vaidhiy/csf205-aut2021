@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Demo using XMLHttpRequest</title>
+    <style>
+        #mytable,
+        td {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body >
+    <h1>Using XMLHttpRequest</h1>
+    Using the XMLHttpRequest to make a request to the server and getting the JSON data back and processing it
+    <br>
+    <hr>
+    <div id="div1" class="container-fluid"></div> <!-- use this to fill in the data that you receive-->
+    <script>
+        var url = "<ANY URL THAT WILL SEND A REQUEST TO RESPOND BACK WITH A JSON";
+
+
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                var obj = JSON.parse(xmlHttp.responseText);
+                console.log(obj);
+            }
+        };
+        xmlHttp.open("GET", url, true);
+        xmlHttp.setRequestHeader("Content-Type","application/json");
+        xmlHttp.send();
+    </script>
+</body>
+
+</html>

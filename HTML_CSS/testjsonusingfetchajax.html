@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Demo using JQuery directly</title>
+    <style>
+        #mytable,
+        td {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body onLoad="timeRefresh(20000);">
+    <h1>Using JQuery to do the GET HTTP request. </h1>
+    You can manipulate the data that you retrieve in the function and fill in the div1 container with your own table or any other presentation format.
+    <br>
+    <hr>
+    <div id="div1" class="container-fluid"></div>
+    <script>
+          var url = "<YOUR URL OF CHOICE WHICH RETURNS A JSON DATA";
+
+        $.ajax({
+            url: url,
+            dataType:"json",
+            success: function (jsonData) {
+                var obj = jsonData;
+                console.log(obj);
+            }
+        });
+
+    </script>
+</body>
+
+</html>
