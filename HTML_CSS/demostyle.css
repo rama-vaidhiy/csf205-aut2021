@@ -1,0 +1,9 @@
+@charset "UTF-8";
+p{
+  color:red;
+}
+
+h1, h2, h3 {
+    font-family: cursive;
+    color: green;
+}
