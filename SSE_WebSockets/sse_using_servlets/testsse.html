@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      Time: <div id="date"></div>
+
+      <br />
+      <br />
+      <button onclick="start()">Start</button>
+
+      <script type="text/javascript">
+         function start() {
+            var eventSource = new EventSource("HelloServlet");
+
+            eventSource.onmessage = function (event) {
+            	console.log(event.data);
+               document.getElementById("date").innerHTML = event.data;
+            };
+         }
+      </script>
+      
+      
+        
+   </body>
+</html>
+
+
+

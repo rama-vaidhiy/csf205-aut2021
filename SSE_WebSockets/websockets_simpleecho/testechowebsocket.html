@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Testing WebSockets</title>
+
+<script type="text/javascript">
+	var socket = null;
+
+	function startSession()
+	{
+		socket = new WebSocket("ws://localhost:8080/WebSocketEcho/echo");   
+	    socket.onmessage = onSocketMessage;
+	}
+	
+	
+	function submitMessage()
+	{
+		var messageToSend = document.getElementById("message").value;
+	    console.log("Retrieve message from input "+messageToSend);
+		socket.send(messageToSend); 
+	}
+	
+
+	function onSocketMessage(event) {
+	   if (event.data) {
+	   	  	console.log("On Socket Message "+event.data);
+	   	 	var pElement = document.createElement("p");
+	     	var echoedMessageText = document.createTextNode(event.data);
+	     	pElement.appendChild(echoedMessageText);
+	   		document.getElementById("echoedMessage").appendChild(pElement);
+	   }
+	}
+	
+</script>
+</head>
+<body>
+
+	<div>
+	
+		<button id="start" value="Start" onclick="startSession()">Start</button>
+		<label for="message" id="messagelbl">Enter your text</label> <input
+			id="message" type="text" />
+		<button id="submit" value="Submit" onclick="submitMessage()">Submit</button>
+		<div id="echoedMessage"></div>
+	</div>
+
+
+</body>
+</html>
