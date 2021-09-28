@@ -1,0 +1,7 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="PROVIDERS_NAMESPACE">
+         <soapenv:Body>
+                         <tsn:OPERATION_NAME>
+                                 ADD THE PARAMETERS THAT YOU NEED TO SET AS XML ELEMENTS
+                        </tns:OPERATION_NAME>
+         </soapenv:Body>
+</soapenv:Envelope>
